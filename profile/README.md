@@ -1,4 +1,4 @@
-# Teammate, full system documentation (A to Z)
+# Teammate
 
 The complete picture of what Teammate is, how it is built, and everything it does.
 This is the master reference. For focused topics see:
