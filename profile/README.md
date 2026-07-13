@@ -3,11 +3,11 @@
 The complete picture of what Teammate is, how it is built, and everything it does.
 This is the master reference. For focused topics see:
 
-- [Providers and API keys](./PROVIDERS.md), how to get every key.
-- [Billing and subscriptions](./BILLING.md), the token math per tier.
-- [Algorithms and techniques](./ALGORITHMS.md), with references.
-- [Security and compliance](./SECURITY_AND_COMPLIANCE.md), measures and laws.
-- [Operations and configuration](./OPERATIONS.md), first run and admin.
+- [Providers and API keys](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/PROVIDERS.md), how to get every key.
+- [Billing and subscriptions](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/BILLING.md), the token math per tier.
+- [Algorithms and techniques](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/ALGORITHMS.md), with references.
+- [Security and compliance](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/SECURITY_AND_COMPLIANCE.md), measures and laws.
+- [Operations and configuration](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/OPERATIONS.md), first run and admin.
 
 ---
 
@@ -105,7 +105,7 @@ speech, storage, cloud, payments, fx, oauth, integration, meeting_bot**. Each
 category resolves its one active `ProviderConfig` from the database, decrypts
 credentials, and instantiates the adapter. To add a provider you implement the
 base class and register it once; to switch you configure, Test, and Set active in
-the admin dashboard. See [PROVIDERS.md](./PROVIDERS.md).
+the admin dashboard. See [PROVIDERS.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/PROVIDERS.md).
 
 ### 3.3 Data layer
 
@@ -167,7 +167,7 @@ base: uploaded documents, cloud files, meeting notes, chats, and their own
 interactions. Recall answers across all of it with citations, blended with general
 model knowledge. Embeddings go through the LLM gateway when an embedding model is
 set, otherwise a built-in lexical fallback so recall works with zero setup. A
-background job keeps indexing new cloud files. See [ALGORITHMS.md](./ALGORITHMS.md).
+background job keeps indexing new cloud files. See [ALGORITHMS.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/ALGORITHMS.md).
 
 ### 5.4 Files and documents
 A unified **file manager** browses every connected cloud (Dropbox, Drive, OneDrive)
@@ -180,7 +180,7 @@ Per-user OAuth means each user connects their own cloud; Teammate reads and writ
 only within their account. Files Teammate produces follow the user's storage
 preference (their cloud, Teammate storage, or automatic). Teammate storage is
 capped and retained per tier; files past retention are auto-deleted unless the user
-downloads them or moves them to their own cloud. See [BILLING.md](./BILLING.md).
+downloads them or moves them to their own cloud. See [BILLING.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/BILLING.md).
 
 ### 5.6 Messaging, scheduling, presenting, suggestions
 Single and bulk messaging, meeting creation with reminders, deck talk-tracks, and
@@ -194,7 +194,7 @@ notifications. AI insights over activity. User-defined workflow automations
 ### 5.8 Billing, tokens, and BYO-LLM
 Consumption-based token metering, per-tier plans, flexible top-ups, promo codes,
 and bring-your-own-LLM (billed at the platform-fee rate, with automatic fallback to
-the platform model if the user's key fails). See [BILLING.md](./BILLING.md).
+the platform model if the user's key fails). See [BILLING.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/BILLING.md).
 
 ### 5.9 Enterprise API
 Enterprise-tier users get SHA-256-hashed API keys (`X-API-Key`) for programmatic
@@ -239,9 +239,9 @@ Teal/coral/lemon design system, Inter font, light and dark, and an animated
 
 ## 8. Repositories
 
-- **teammate-backend**, the FastAPI multi-agent engine and API.
-- **teammate-frontend**, the React dashboard and admin console.
-- **teammate-infrastructure**, Docker, Helm, CI, and these docs.
+- **[teammate-backend](https://github.com/Teammate-space/teammate-backend)**, the FastAPI multi-agent engine and API.
+- **[teammate-frontend](https://github.com/Teammate-space/teammate-frontend)**, the React dashboard and admin console.
+- **[teammate-infrastructure](https://github.com/Teammate-space/teammate-infrastructure)**, Docker, Helm, CI, and the full documentation set.
 
 Each repo has its own README scoped to its concerns; this document ties them
 together.
@@ -250,8 +250,8 @@ together.
 
 ## 9. Where to go next
 
-- Set it up: [OPERATIONS.md](./OPERATIONS.md).
-- Get every key: [PROVIDERS.md](./PROVIDERS.md).
-- Understand the money: [BILLING.md](./BILLING.md).
-- Understand the internals: [ALGORITHMS.md](./ALGORITHMS.md).
-- Understand the safeguards and laws: [SECURITY_AND_COMPLIANCE.md](./SECURITY_AND_COMPLIANCE.md).
+- Set it up: [OPERATIONS.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/OPERATIONS.md).
+- Get every key: [PROVIDERS.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/PROVIDERS.md).
+- Understand the money: [BILLING.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/BILLING.md).
+- Understand the internals: [ALGORITHMS.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/ALGORITHMS.md).
+- Understand the safeguards and laws: [SECURITY_AND_COMPLIANCE.md](https://github.com/Teammate-space/teammate-infrastructure/blob/main/docs/SECURITY_AND_COMPLIANCE.md).
